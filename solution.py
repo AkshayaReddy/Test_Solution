@@ -45,7 +45,7 @@ def query_exe(connect, query):
         cursor.execute(query)
         connect.commit()
         cursor.close()
-        print("executed")
+        print("Query Executed")
     except Error as e:
         print(f'Error: {e}')
 
@@ -57,7 +57,7 @@ def getcountries(connect, query):
         cursor.execute(query)
         result = cursor.fetchall()
         cursor.close()
-        print("executed")
+        print("Got Countries")
         return result
     except Error as e:
         print(f'Error: {e}')
